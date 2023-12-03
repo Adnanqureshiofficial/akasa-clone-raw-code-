@@ -1,0 +1,384 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/22473a59b2.js" crossorigin="anonymous"></script>
+   <title></title>
+  <style>
+      *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: Roboto;
+      }
+
+      html{
+        font-size: 18px;
+      }
+      @media (max-width: 1024px)
+{
+html{
+  font-size: 17px;
+}
+}
+      @media (max-width: 440px)
+{
+html{
+  font-size: 15px;
+}
+}
+
+.ticket-booking-container{
+  display: flex;
+  width: 80%;
+  min-height: 0px;
+  flex-direction: column;
+  margin: auto;
+  background: white;
+  color: #666666;
+  border-radius: 0.7em;
+  box-shadow: 1px 2px 11px lightgray;
+
+}
+.ticket-booking-container-elements{
+
+  width: 100%;
+}
+.sub-section-container{
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-content: center;
+  min-height: 9.5vh;
+  border-radius: 0.7em;
+  background-color: white;
+  border-top-right-radius: 0px;
+  box-shadow: 1px 2px 11px lightgray;
+  font-size: 0.76rem;
+}
+.sub-section-container:active{
+  color:#ff6300 ;
+  border-bottom: 2px solid #ff6300;
+}
+#other-elements-container{
+  padding: 1.5em;
+    min-height: 0vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.flighttype{
+  height: 7.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+.flighttype-elements{
+  min-width: 211px;
+    display: flex;
+font-weight: bold;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 7vh;
+    align-content: center;
+}
+.flighttype-elements>span{
+  display: flex;
+  font-size: 0.8rem;
+  min-width: 108px;
+}
+
+.flight-type-input{
+  width: 18%;
+}
+.destination-details
+{
+  display: flex;
+  min-height: 10vh;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.8em;
+}
+
+.from-to{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+}
+.from-to-elements
+{
+  width: 9vw;
+  height: 7.5vh;
+  border-radius: 0.3em;
+  border: solid 1px #a5a5a5;
+  padding: 10px 5px;
+  border-top-right-radius: 0px;
+  border: 1px solid #e1e1df;
+}
+.departure-date-box{
+  position: relative;
+  width: 19vw;
+  display: flex;
+  justify-content: flex-end;
+}
+.departure-date
+{
+  position: absolute;
+  top: -15%;
+  left: 16%;
+  background-color: white;
+  font-size: 0.7em;
+}
+#date{
+  width: 90%;
+  height: 7.5vh;
+  border-radius: 0.3em;
+  border: 1px solid #e1e1df;
+  padding: 10px 5px;
+  border-top-right-radius: 0px;
+}
+.pass-promo{
+  width: 36vw;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+.pass-promo>input{
+  height: 7.5vh;
+  width: 42%;
+  border-radius: 0.3em;
+  border: 1px solid #e1e1df;
+  padding: 10px 5px;
+  border-top-right-radius: 0px;
+}
+/*special fares*/
+.different-categories-container{
+  min-height: 13vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.9em;
+    color: white;
+    background-color: white;
+    align-content: center;
+
+}
+#different-categories-sub-container{
+  width: 75%;
+    display: flex;
+    flex-direction: column;
+
+}
+#special-fares{
+  height: 4vh;
+  color: black;
+    font-size: 0.7em;
+    
+}
+#different-categories{
+  min-height: 6vh;
+    margin-top: 0.2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+#different-categories>span{
+  font-size: 0.6rem;
+    padding: 4px 8px;
+    margin: 4px;
+    display: flex;
+color: #666666;
+    background: #f5f5f5;
+    border: 1px solid #e1e1df;
+    border-radius: 2.5em;
+    justify-content: center;
+    min-height: 3.5vh;
+    
+    align-items: center;
+}
+#search-btn-container{
+  width: 25%;
+  display: flex;
+  align-items: center;
+ 
+  justify-content: space-around;
+}
+#search-btn{
+  border-radius: 0.3em;
+  border: 1px solid #e1e1df;
+  color: white;
+  background: #ff6300;
+  border-top-right-radius: 0px;
+  min-height: 30px;
+  padding: 9px;
+}
+
+/*max-width*/
+@media (max-width: 1024px)
+{
+html{
+  font-size: 16px;
+}
+}
+/*screen 768px*/
+@media (max-width: 670px) {
+  .destination-details
+{
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5em;
+}
+.from-to{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  justify-content: center;
+  margin: 1em;
+}
+
+.from-to-elements{
+  width: 100%;
+
+}
+.departure-date-box{
+  width: 100%;
+  justify-content: center;
+
+}
+.departure-date {
+  position: absolute;
+  top: -15%;
+  left: 23%;
+  font-size: 0.8em;
+}
+#date{
+  width: 60%;
+}
+
+.pass-promo{
+  width: 100%;
+  justify-content: space-between;
+  margin: 1em;
+}
+#search-btn{
+  padding: 7px;
+}
+}
+
+@media  (max-width: 440px) {
+
+  #other-elements-container{
+    padding: 1rem;
+  }
+  #different-categories-container{
+      flex-direction: column;
+  }
+  #different-categories-sub-container{
+      width: 100%;
+  }
+  #different-categories{
+text-align: center;
+}
+#different-categories>span{
+  width: 45%;
+  text-align: center;
+}
+#search-btn-container {
+  display: flex;
+  align-items: center;
+  /* padding-right: 1rem; */
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 0.5em 0px;
+  width: 100%;
+  padding: 0px;
+
+}
+.sub-section-container{
+
+display: grid;
+grid-template-columns: repeat(4, 1fr);}
+
+#book-a-flight{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  height: 6vh;
+  font-size: 0.9rem;
+}
+#check-in{
+  grid-column-start: 1;
+  grid-column-end: 3;
+height: 6vh;
+}
+#manage-booking{
+  grid-column-start:3 ;
+  grid-column-end:5 ;
+height: 6vh;
+}
+.sub-section-elements{
+  display: grid;
+  align-items: center;
+  width: 90%;
+  justify-items: center;
+  font-size: 0.85rem;
+}
+}
+@media  (max-width: 340px){
+  .flighttype{
+    justify-content: center;
+  }
+  .flighttype-elements>span{
+    min-width: 90px;
+  }
+}
+  </style>
+</head>
+<body>
+  <section class="ticket-booking-container">
+      <div class="sub-section-container ticket-booking-container-elements">
+          <h3 class="sub-section-elements" id="book-a-flight">Book a Flight</h3>
+          <h3 class="sub-section-elements" id="check-in">Check-in</h3>
+          <h3 class="sub-section-elements" id="manage-booking">Manage Booking</h3>
+      </div>
+      <div class="ticket-booking-container-elements" id="other-elements-container">
+      <div class="flighttype">
+          <div class="flighttype-elements">
+              <span><input type="radio" name="flight-type" class="flight-type-input" >&nbsp;&nbsp;<label for="">One-way</label></span><span><input type="radio" name="flight-type" class="flight-type-input" >&nbsp;&nbsp;<label for="">Round Trip</label></span>
+          </div>
+      </div>
+
+      <div class="destination-details">
+          <div class="from-to">
+              <input type="text" name="" class="from-to-elements" placeholder="From" fdprocessedid="kvi9cm">
+              <i class="fa-solid fa-arrow-right-arrow-left" id="left-right" aria-hidden="true"></i>
+              <input type="text" name="" class="from-to-elements" placeholder="To" fdprocessedid="xnalza">
+          </div>
+          <div class="departure-date-box"><span class="departure-date">Departure-Date</span><input type="date" name="" id="date"></div>
+       <div class="pass-promo"><input type="text" name="" id="" placeholder="Passengers" fdprocessedid="ewf1jg">
+          <input type="text" name="" id="" placeholder="Promo Code" fdprocessedid="jdq6ca"></div>  
+
+      </div>
+      <div class="different-categories-container">
+          <div id="different-categories-sub-container">
+              <div id="special-fares"><span>Special-Fares</span>&nbsp;&nbsp;<i class="fa-solid fa-circle-info" aria-hidden="true"></i> </div>
+              <div id="different-categories"><span>Armed Forces</span><span>Medical Professionals</span><span>Senior
+                      Citizens</span><span>Unaccompanied Minor</span></div>
+          </div>
+          <div id="search-btn-container"><button id="search-btn" fdprocessedid="angzk">Search-Flight</button></div>
+      </div>
+  </div>
+
+  </section></body>
+  </html>
